@@ -1,0 +1,31 @@
+.contact .row{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+}
+
+.contact .row form{
+    flex: 1 40rem;
+    padding: 2rem 2.5rem;
+    background: #fff;
+    border-radius: .5rem;
+}
+
+.contact .row form .box{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+}
+
+.contact .row form textarea{
+    height: 10rem;
+    resize: none;
+}

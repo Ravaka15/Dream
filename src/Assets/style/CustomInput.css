@@ -1,0 +1,28 @@
+/* .form-control {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: all 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+  }
+  
+  .form-control-placeholder {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transition: all 0.3s;
+    color: #999;
+  }
+  
+  .form-control:focus + .form-control-placeholder,
+  .form-control:not(:placeholder-shown) + .form-control-placeholder {
+    top: 0;
+    font-size: 0.75rem;
+    color: #007bff;
+  }
+   */

@@ -1,0 +1,43 @@
+/* Footer container */
+footer {
+    background-color: #e0dddd;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Contact information section */
+  footer div:nth-child(1) {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  /* Useful links section */
+  footer div:nth-child(2) {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  /* Copyright section */
+  footer div:nth-child(3) {
+    flex: 1;
+  }
+  
+  /* Icon styles */
+  footer h3{
+    text-decoration: underline;
+    font-size: 1.3rem;
+    color: #000;
+  }
+  
+  /* Links styles */
+  footer a {
+    text-decoration: none;
+    color: #383535;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
