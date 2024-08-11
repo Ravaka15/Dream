@@ -1,0 +1,34 @@
+# Étape 1: Définir l'image de base
+FROM node:16-alpine
+
+# Définir le répertoire de travail dans le conteneur
+WORKDIR /app
+
+# Copier les fichiers package.json et package-lock.json (ou yarn.lock)
+COPY package*.json ./
+# Si vous utilisez Yarn, décommentez la ligne suivante et commentez la ligne ci-dessus
+# COPY package.json yarn.lock ./
+
+# Installer les dépendances
+RUN npm install
+# Si vous utilisez Yarn, décommentez la ligne suivante et commentez la ligne ci-dessus
+# RUN yarn install
+
+# Copier le reste des fichiers du projet dans le répertoire de travail
+COPY . .
+
+# Construire l'application React pour la production
+RUN npm run build
+# Si vous utilisez Yarn, décommentez la ligne suivante et commentez la ligne ci-dessus
+# RUN yarn build
+
+# Étape 2: Serveur pour servir l'application construite
+FROM nginx:alpine
+# Copier le build de React dans le répertoire de serveur
+COPY --from=0 /app/build /usr/share/nginx/html
+
+# Exposer le port 80 pour accéder au serveur nginx
+EXPOSE 80
+
+# Commande pour démarrer le serveur nginx
+CMD ["nginx", "-g", "daemon off;"]
